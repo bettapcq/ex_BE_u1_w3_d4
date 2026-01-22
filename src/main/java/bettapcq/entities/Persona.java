@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -31,9 +32,10 @@ public class Persona {
     private List<Partecipazione> partecipazioni;
 
 
+
     @ManyToOne
     @JoinColumn(name = "winner")
-    private Persona persona;
+    private Persona vincitore;
 
     public Persona() {
 

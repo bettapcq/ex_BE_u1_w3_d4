@@ -1,9 +1,6 @@
 package bettapcq.entities;
 
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -11,6 +8,12 @@ import java.util.Set;
 @Entity
 @DiscriminatorValue("Atletica")
 public class GaraDiAtletica extends Evento{
+    @ManyToMany
+    @JoinTable(
+            name = "gara_atleti",
+            joinColumns = @JoinColumn(name = "gara_id"),
+            inverseJoinColumns = @JoinColumn(name = "persona_id")
+    )
     private Set<Persona> setAtleti;
     @ManyToOne
     @JoinColumn(name = "id_persona_vincitore")

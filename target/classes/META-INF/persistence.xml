@@ -8,6 +8,9 @@
         <class>bettapcq.entities.Location</class>
         <class>bettapcq.entities.Partecipazione</class>
         <class>bettapcq.entities.Persona</class>
+        <class>bettapcq.entities.PartitaDiCalcio</class>
+        <class>bettapcq.entities.GaraDiAtletica</class>
+        <class>bettapcq.entities.Concerto</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/gestioneeventi2"/>
