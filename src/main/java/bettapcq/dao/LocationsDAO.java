@@ -27,4 +27,10 @@ public class LocationsDAO {
         //5.msg di avvenuta operazione:
         System.out.println("L'aggiunta della location con id " + nuovaLocation.getIdLocation() + " è avvenuta con successo!");
     }
+
+    public Location getById(long id) {
+        return entityManager.find(Location.class, id);
+    }
+
+
 }

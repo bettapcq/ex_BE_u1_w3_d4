@@ -26,7 +26,7 @@ public PartitaDiCalcio(){
                                   String descrizione,
                                   tipiEvento tipoEvento,
                                   long numeroMassimoPartecipanti,
-                                  String location,
+                                  Location location,
                                   String squadraCasa,
                                   String squadraOspite,
                                   int numGolSqCasa,

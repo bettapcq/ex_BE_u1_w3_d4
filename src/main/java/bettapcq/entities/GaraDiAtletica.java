@@ -27,7 +27,7 @@ public class GaraDiAtletica extends Evento{
                            String descrizione,
                            tipiEvento tipoEvento,
                            long numeroMassimoPartecipanti,
-                           String location,
+                           Location location,
                            Set<Persona> setAtleti,
                            Persona vincitore
 

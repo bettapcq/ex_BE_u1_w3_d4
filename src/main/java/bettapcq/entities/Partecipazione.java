@@ -34,6 +34,10 @@ public class Partecipazione {
     // meglio usarla per scegliere noi come sarà fatta la JUNCTION TABLE
     private List<Location> locations;
 
+    public Partecipazione(Persona persona, Evento evento) {
+
+    }
+
 
     public UUID getIdPartecipazione() {
         return idPartecipazione;

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@DiscriminatorValue("concerti")
+@DiscriminatorValue("Concerto")
 public class Concerto extends Evento {
     private GeneriConcerto genere;
     private boolean inStreaming;
@@ -22,7 +22,7 @@ public class Concerto extends Evento {
                           String descrizione,
                           tipiEvento tipoEvento,
                           long numeroMassimoPartecipanti,
-                          String location,
+                          Location location,
                           GeneriConcerto genere,
                           boolean inStreaming
 

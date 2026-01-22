@@ -43,7 +43,7 @@ public class Evento {
     }
 
     //costruttore classico:
-    public Evento(String titolo, LocalDate dataEvento, String descrizione, tipiEvento tipoEvento, long numeroMassimoPartecipanti, String location) {
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, tipiEvento tipoEvento, long numeroMassimoPartecipanti, Location location) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
