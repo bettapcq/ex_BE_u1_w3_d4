@@ -68,13 +68,14 @@ public class EventiDAO {
         System.out.println("La rimozione dell' evento con id " + idToSearch + " è avvenuta con successo!");
     }
 
-    public void getConcertiInStreaming(boolean booleano){
-        Concerto result = entityManager.find(Concerto.class, booleano);
-        if (result == null) throw new NotResultFoundException("Non è stato trovato nessun concerto");
+    public List<Concerto> getConcertiInStreaming(boolean booleano){
+            TypedQuery<Concerto> query = entityManager.createQuery("SELECT concerto FROM Concerto concerto WHERE concerto.inStreaming = :isStreaming", Concerto.class);
+        query.setParameter("isStreaming", booleano);
+        return query.getResultList();
     }
 
-    public List<Evento> getConcertiPerGenere(GeneriConcerto genere){
-        TypedQuery<Evento> query = entityManager.createQuery("SELECT e FROM Event e WHERE e.genere LIKE :n", Evento.class); // i : identificano i parametri nella query
+    public List<Concerto> getConcertiPerGenere(GeneriConcerto genere){
+        TypedQuery<Concerto> query = entityManager.createQuery("SELECT c FROM Concerto c WHERE c.genere LIKE :n", Concerto.class);
         query.setParameter("n", genere);
         return query.getResultList();
     }
